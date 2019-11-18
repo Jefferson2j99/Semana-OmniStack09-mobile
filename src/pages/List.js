@@ -16,14 +16,14 @@ export default function List() {
   }, []);
 
   return (
-    <ScrollView>
-      <SafeAreaView style={StyleSheet.container}>
-        <Image source={logo} />
+    <SafeAreaView style={styles.container}>
+      <Image source={logo} style={styles.logo} />
 
+      <ScrollView>
         {techs.map(tech => <SpotList key={tech} tech={tech} />)}
+      </ScrollView>
 
-      </SafeAreaView>
-    </ScrollView>
+    </SafeAreaView>
   )
 }
 
@@ -36,6 +36,6 @@ const styles = StyleSheet.create({
     height: 32,
     resizeMode: "contain",
     alignSelf: "center",
-    marginTop: 10
+    marginTop: 30
   }
 });
